@@ -6,7 +6,7 @@ class ContextProvider extends Component {
     super(props);
     
     this.state = {
-      ui: {
+      filters: {
         active: true,
         headerActive: false
       }

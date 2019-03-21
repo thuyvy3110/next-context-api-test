@@ -1,10 +1,9 @@
 import App, { Container } from 'next/app';
-import Context from '../config/Context';
 import ContextProvider from '../provider/ContextProvider';
 import fetch from 'isomorphic-unfetch';
 
 export default class MyApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps() {
     const res = await fetch('https://node-hnapi.herokuapp.com/news');
     let data = await res.json();
 
