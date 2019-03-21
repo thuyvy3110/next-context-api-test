@@ -4,6 +4,7 @@ import Context from '../config/Context';
 class ContextProvider extends Component {
   constructor(props) {
     super(props);
+    
     this.state = {
       ui: {
         active: true,
