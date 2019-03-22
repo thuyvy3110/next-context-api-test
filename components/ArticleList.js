@@ -5,7 +5,7 @@ const ArticleList = () => {
   const generateArticles = () => {
     const context = React.useContext(Context);
     console.log(context, 'context') // Context returns undefined
-    // return context.articles.map(article => <p>{article.title}</p>)
+    return context.articles.map(article => <p>{article.title}</p>)
   }
 
   return (

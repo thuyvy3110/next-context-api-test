@@ -14,8 +14,9 @@ class ContextProvider extends Component {
   }
 
   render() {
+    const { value } = this.props;
     return (
-      <Context.Provider>
+      <Context.Provider value={ value }>
         {this.props.children}
       </Context.Provider>
     );
