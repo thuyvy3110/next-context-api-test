@@ -16,7 +16,7 @@ export default class MyApp extends App {
     
     return (
       <Container>
-        <ContextProvider value={{ articles: this.props.articles}}>
+        <ContextProvider articles={this.props.articles}>
           <Component {...pageProps} />
         </ContextProvider>
       </Container>

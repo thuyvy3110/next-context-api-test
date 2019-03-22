@@ -7,8 +7,7 @@ class ContextProvider extends Component {
     
     this.state = {
       filters: {
-        active: true,
-        headerActive: false
+        active: true
       }
     };
   }
@@ -16,7 +15,17 @@ class ContextProvider extends Component {
   render() {
     const { value } = this.props;
     return (
-      <Context.Provider value={ value }>
+      <Context.Provider
+        value={{
+          ...this.props,
+          state: this.state,
+          toggleActive: () => this.setState({ 
+            filters: {
+              active: !this.state.filters.active
+            }
+          })
+        }}
+      >
         {this.props.children}
       </Context.Provider>
     );
